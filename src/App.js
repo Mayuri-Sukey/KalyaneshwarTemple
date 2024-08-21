@@ -7,31 +7,31 @@ import "./responsivetab1.css";
 import { Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import DailyProgram from "./pages/dailyprogram/DailyProgram";
-import History from "./pages/history/History";
-import { AdhocCommittee } from "./pages/AdhocCommittee";
-import Regulations from "./pages/Regulations";
-import Resolution from "../src/pages/Resolution/Resolution"
-import TheTemple from "./pages/TheTemple";
-import PlacesAroundShirdi from "./pages/PlacesAroundShirdi";
-import Gallery from "./pages/PhotoGallery";
-import Saicharita from "./pages/saicharita/Saicharita";
-import SaileelaMag from "./pages/saileelaMag/SaileelaMag";
-import AnnualReports from "./pages/Annual Reports/AnnualReports";
-import Festival from "./pages/Festival";
-import Puja from "./pages/Puja";
-import Appeal from "./pages/Appeal";
-import Donation from "./pages/Donation/Donation";
-import EmergencyHelpline from "./pages/HelplineNo/EmergencyHelpline";
-import Notice from "./pages/Notice/Notice";
-import Recruitment from "./pages/Recruitment/Recruitment";
-import Layout from "./pages/Accomodation/Layout";
-import Reach_layout from "./pages/How_To_Reach/Reach_layout";
-import BookTable from "./pages/BookTable/BookTable";
-import MusicPlayer from "./pages/AudioPage/audio";
-import Video from "./pages/VideosPage/Video";
-import Aarti from "./pages/Aarti/aarti";
-import Tenders from "./pages/Tenders/Tenders";
+// import DailyProgram from "./pages/dailyprogram/DailyProgram";
+// import History from "./pages/history/History";
+// import { AdhocCommittee } from "./pages/AdhocCommittee";
+// import Regulations from "./pages/Regulations";
+// import Resolution from "../src/pages/Resolution/Resolution"
+// import TheTemple from "./pages/TheTemple";
+// import PlacesAroundShirdi from "./pages/PlacesAroundShirdi";
+// import Gallery from "./pages/PhotoGallery";
+// import Saicharita from "./pages/saicharita/Saicharita";
+// import SaileelaMag from "./pages/saileelaMag/SaileelaMag";
+// import AnnualReports from "./pages/Annual Reports/AnnualReports";
+// import Festival from "./pages/Festival";
+// import Puja from "./pages/Puja";
+// import Appeal from "./pages/Appeal";
+// import Donation from "./pages/Donation/Donation";
+// import EmergencyHelpline from "./pages/HelplineNo/EmergencyHelpline";
+// import Notice from "./pages/Notice/Notice";
+// import Recruitment from "./pages/Recruitment/Recruitment";
+// import Layout from "./pages/Accomodation/Layout";
+// import Reach_layout from "./pages/How_To_Reach/Reach_layout";
+// import BookTable from "./pages/BookTable/BookTable";
+// import MusicPlayer from "./pages/AudioPage/audio";
+// import Video from "./pages/VideosPage/Video";
+// import Aarti from "./pages/Aarti/aarti";
+// import Tenders from "./pages/Tenders/Tenders";
 
 
 // import Regulations from "./pages/Regulations";
@@ -46,7 +46,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        {/* <Route path="/about" element={<About />} />
         <Route path="/dailyprogram" element={<DailyProgram />} />
         <Route path="/ad-hoc-committee" element={<AdhocCommittee />} />
         <Route path="/sanathan-regulation" element={<Regulations />} />
@@ -76,7 +76,7 @@ function App() {
     <Route path="/audio" element={<MusicPlayer/>}/>
     <Route path="/video" element={<Video/>}/>
 <Route path="/aarti" element={<Aarti/>}/>
-<Route path="/tenders" element={<Tenders/>}/>
+<Route path="/tenders" element={<Tenders/>}/> */}
       </Routes>
     </div>
   );
