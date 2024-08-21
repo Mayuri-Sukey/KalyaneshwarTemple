@@ -1,0 +1,31 @@
+
+[
+     {
+        "id":"1",
+        "img":"sai-baba//src//assets//Sai-Baba-PNG-Images-14.png"
+
+    },
+    {
+        "id":"2",
+        "img":"https://sai.org.in/sites/default/files/NOV23SLIDER2.png"
+
+    },
+
+    {
+        "id":"3",
+        "img":"https://sai.org.in/sites/default/files/NOV23SLIDER5.png"
+
+    },
+
+    {
+        "id":"4",
+        "img":"https://sai.org.in/sites/default/files/saifollowus0423.png"
+
+    },
+
+    {
+        "id":"5",
+        "img":"https://sai.org.in/sites/default/files/NOV23SLIDER3.png"
+
+    }
+]

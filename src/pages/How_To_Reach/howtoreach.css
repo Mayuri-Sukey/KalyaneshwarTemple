@@ -1,0 +1,492 @@
+/* //////////Bus CSS Start////////// */
+
+
+.how-to-reach{
+  background-image: linear-gradient(90deg, #5bb6b6 0%, #eba90c 100%);
+}
+.bus_heading {
+  margin-left: 20px;
+  margin-top: 30px;
+  color: #bc630b;
+}
+
+.bus_container p{
+  margin-left: 20px;
+}
+ 
+.bus-active {
+  background-color: #F1B04C; /* Change to the active color */
+}
+
+.bus-active .bus_heading,
+.bus-active .bus-content {
+  color: #fff; /* Change text color to white for visibility */
+}
+
+.bus_container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  color: #333;
+}
+
+.bus_responsive-table {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bus_responsive-table li {
+  border-radius: 3px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.bus_responsive-table .bus_table-header {
+  background-color: #bc630b;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bus_responsive-table .col {
+  flex: 1;
+  padding: 5px 10px;
+  text-align: left; /* Align content to the left */
+}
+
+@media all and (max-width: 767px) {
+  .bus_responsive-table .bus_table-header {
+      display: none;
+  }
+
+  .bus_responsive-table li {
+      display: block;
+      padding: 10px 15px;
+  }
+
+  .bus_responsive-table .col {
+      flex-basis: 100%;
+      display: flex;
+      padding: 10px 0;
+      text-align: left; /* Ensure text is left-aligned on small screens */
+  }
+
+  .bus_responsive-table .col:before {
+      color: #F1B04C;
+      padding-right: 5px;
+      content: attr(data-label) ":";
+      flex-basis: 50%;
+      text-align: right;
+  }
+}
+
+/* //////////Bus CSS End////////// */
+
+/* //////////Train CSS Start////////// */
+
+.train_container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.h1 {
+  color: #bc630b;
+}
+
+.train_responsive-table {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.train_responsive-table li {
+  border-radius: 3px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.train_responsive-table .train_table-header {
+  background-color: #bc630b;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.train_responsive-table .col {
+  flex: 1;
+  padding: 5px 10px;
+  text-align: left; /* Align content to the left */
+}
+
+.train_station-info {
+  margin-bottom: 20px;
+}
+
+.train_station-info .h2 {
+  color: #333;
+}
+
+.train_station-details {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.train_station-details p {
+  margin: 5px 0;
+}
+
+.train_train-list {
+  margin-top: 20px;
+}
+
+.train_train-list .h2 {
+  color: #333;
+}
+
+@media all and (max-width: 767px) {
+  .train_responsive-table .train_table-header {
+      display: none;
+  }
+
+  .train_responsive-table li {
+      display: block;
+      padding: 10px 15px;
+  }
+
+  .train_responsive-table .col {
+      flex-basis: 100%;
+      display: flex;
+      padding: 10px 0;
+      text-align: left; /* Ensure text is left-aligned on small screens */
+  }
+
+  .train_responsive-table .col:before {
+      color: #bc630b;
+      padding-right: 10px;
+      content: attr(data-label)":";
+      flex-basis: 50%;
+      text-align: right;
+  }
+}
+
+/* //////////Train CSS End////////// */
+
+/* //////////Air CSS Start////////// */
+
+.Air_container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.Air_responsive-table {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Air_responsive-table li {
+  border-radius: 3px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.Air_responsive-table .Air_table-header {
+  background-color: #bc630b;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Air_responsive-table .Air_col {
+  flex: 1;
+  padding: 5px 10px;
+  text-align: left; /* Align content to the left */
+}
+
+.Air_menu {
+  display: flex;
+  justify-content: center;
+}
+
+.Air_menu-link {
+  text-decoration: none;
+}
+
+.Air_menu-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px;
+  margin: 0 10px;
+  border: none; /* Remove border */
+  border-radius: 0; /* Make button rectangular */
+  background-color: #bc630b;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Air_menu-button:hover {
+  background-color: #d27c25;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Air_menu-button.active {
+  background-color: orange;
+}
+
+@media screen and (max-width: 768px) {
+  .Air_menu-button {
+      width: 80%;
+      font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media all and (max-width: 767px) {
+  .Air_responsive-table .Air_table-header {
+      display: none;
+  }
+
+  .Air_responsive-table li {
+      display: block;
+      padding: 10px 15px;
+  }
+
+  .Air_responsive-table .Air_col {
+      flex-basis: 100%;
+      display: flex;
+      padding: 10px 0;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left; /* Ensure text is left-aligned on small screens */
+  }
+
+  .Air_responsive-table .Air_col:before {
+      color: #bc630b;
+      padding-right: 10px;
+      content: attr(data-label)":";
+      flex-basis: 50%;
+      text-align: right;
+  }
+}
+
+/* //////////Air CSS End////////// */
+
+/* //////////Arrival CSS Start////////// */
+
+.Arrival_container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.Arrival_responsive-table {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Arrival_responsive-table li {
+  border-radius: 3px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.Arrival_responsive-table .Arrival_table-header {
+  background-color: #bc630b;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Arrival_responsive-table .col {
+  flex: 1;
+  padding: 5px 10px;
+  text-align: left; /* Align content to the left */
+}
+
+.Arrival_menu {
+  display: flex;
+  justify-content: center;
+}
+
+.Arrival_menu-link {
+  text-decoration: none;
+}
+
+.Arrival_menu-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px;
+  margin: 0 10px;
+  border: none; /* Remove border */
+  border-radius: 0; /* Make button rectangular */
+  background-color: #bc630b;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Arrival_menu-button:hover {
+  background-color: #d27c25;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Arrival_menu-button.active {
+  background-color: orange;
+}
+
+@media screen and (max-width: 768px) {
+  .Arrival_menu-button {
+      width: 80%;
+      font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media all and (max-width: 767px) {
+  .Arrival_responsive-table .Arrival_table-header {
+      display: none;
+  }
+
+  .Arrival_responsive-table li {
+      display: block;
+      padding: 10px 15px;
+  }
+
+  .Arrival_responsive-table .col {
+      flex-basis: 100%;
+      display: flex;
+      padding: 10px 0;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left; /* Ensure text is left-aligned on small screens */
+  }
+
+  .Arrival_responsive-table .col:before {
+      color: #bc630b;
+      padding-right: 10px;
+      content: attr(data-label)":";
+      flex-basis: 50%;
+      text-align: right;
+  }
+}
+
+/* //////////Arrival CSS End////////// */
+
+/* //////////HOW_To_Reach CSS Start////////// */
+
+.How_menu {
+  display: flex;
+  justify-content: center;
+  padding-top: 4%;
+}
+
+.How_menu-link {
+  text-decoration: none;
+}
+
+.How_menu-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px;
+  margin: 0 10px;
+  border: none; /* Remove border */
+  border-radius: 0; /* Make button rectangular */
+  background-color: #bc630b;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.How_menu-button:hover {
+  background-color: #d27c25;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.How_menu-button.active {
+  background-color: orange;
+}
+
+.margin {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .How_menu-button {
+      width: 80%;
+      font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* //////////HOW_To_Reach CSS End////////// */
+
+
+.search-input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 98%;
+  font-size: 16px;
+}
+
+.not-found {
+  text-align: center;
+  color: #f7f1f1;
+  margin-top: 20px;
+  font-size: 30px;
+}

@@ -1,0 +1,125 @@
+.BookTable_container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  
+}
+.priceList{
+  background: #fff;
+  padding-top: 3%;
+}
+
+.BookTable_responsive-table {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.BookTable_heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #bc630b;
+}
+
+.BookTable_subheading {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.BookTable_responsive-table li {
+  border-radius: 3px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.BookTable_responsive-table .BookTable_table-header {
+  background-color: #bc630b;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.BookTable_responsive-table .col {
+  flex: 1;
+  padding: 5px 10px;
+  text-align: left; /* Align content to the left */
+}
+
+.BookTable_menu {
+  display: flex;
+  justify-content: center;
+}
+
+.BookTable_menu-link {
+  text-decoration: none;
+}
+
+.BookTable_menu-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px;
+  margin: 0 10px;
+  border: none; /* Remove border */
+  border-radius: 0; /* Make button rectangular */
+  background-color: #bc630b;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.BookTable_menu-button:hover {
+  background-color: #d27c25;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.BookTable_menu-button.active {
+  background-color: orange;
+}
+
+@media screen and (max-width: 768px) {
+  .BookTable_menu-button {
+      width: 80%;
+      font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media all and (max-width: 767px) {
+  .BookTable_responsive-table .BookTable_table-header {
+      display: none;
+  }
+
+  .BookTable_responsive-table li {
+      display: block;
+      padding: 10px 15px;
+  }
+
+  .BookTable_responsive-table .col {
+      flex-basis: 100%;
+      display: flex;
+      padding: 10px 0;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left; /* Ensure text is left-aligned on small screens */
+  }
+
+  .BookTable_responsive-table .col:before {
+      color: #bc630b;
+      padding-right: 10px;
+      content: attr(data-label)":";
+      flex-basis: 50%;
+      text-align: right;
+  }
+}

@@ -1,0 +1,139 @@
+@media only screen and (max-width: 767px) {
+  .update-card {
+    width: 300px !important;
+  }
+
+  .update-bg {
+    width: 290px !important;
+  }
+
+  .update-scrolling-container {
+    width: 300px !important;
+  }
+
+  .gallery {
+    margin-top: 5px !important;
+  }
+
+  .about-info-parent {
+    padding: 15px 1rem 15px 1rem !important;
+  }
+  .about-dataimg {
+    width: 300px !important;
+    height: 200px !important;
+    margin: 20px 40px 0 40px;
+  }
+
+  .about-head h1 {
+    font-size: 20px !important;
+    width: 200px !important;
+    margin-left: 18px !important;
+  }
+
+  .about-imgdata-flex {
+    flex-wrap: wrap;
+  }
+  .about-path span {
+    font-size: 15px !important;
+  }
+  .adhok-headdiv-head h4 {
+    margin: 20px 20px;
+  }
+  .adhok-card {
+    width: auto !important;
+    height: auto !important;
+  }
+  .adhok-head h1 {
+    font-size: 20px !important;
+    width: 250px !important;
+    margin-left: 50px !important;
+  }
+  .regulation-left {
+    width: 100% !important;
+  
+  }
+  .regulation-right{
+    display: none;
+  }
+
+  /* for temple premise page */
+  .information {
+    flex-direction: column; /* Stack items vertically */
+    padding-top: 2%;
+    padding-bottom: 1%;
+  }
+
+  .info {
+    max-width: 100%;        /* Ensure each container takes full width */
+    padding: 5px;  
+          /* Adjust padding as needed */
+  }
+  .info p{
+    font-size: 12px;
+    /* font-weight: 300; */
+  }
+
+  .info-img img {
+    height: auto;           /* Ensure image scales properly */
+    border-radius: 5px;     /* Slightly larger border-radius for mobile */
+  }
+
+  /* places */
+  .places-head h1{
+    font-size: 18px !important;
+    width: 200px !important;
+    margin-left: 10px !important;
+  }
+
+  .places_section {
+
+    grid-template-columns: repeat(1, 1fr);
+   
+  }
+  .places_image{
+    margin-left: 5%;
+  } 
+  .places_paragraph {
+    font-size: 12px;
+  }
+
+
+  /* latestNews Cards */
+
+  .contains ul li {
+   
+    padding: 3px 9px;
+    margin: 15px 19px;
+    font-size: 15px;
+  
+}
+.contains ul {
+  margin-top: 10px;
+}
+.down-btn{
+  right: -5%;
+}
+/* .contains {
+
+  height: 67%;
+} */
+
+/* dailyprogram section */
+
+.update-main-div {
+
+  padding: 0.5rem 1rem 0 2rem;
+  /* margin-right: 5%; */
+
+}
+
+
+}
+
+@media only screen and (max-width: 480px) {
+  .update-main-div {
+    padding: 0.5rem; /* Further adjust padding */
+  }
+}
+
+

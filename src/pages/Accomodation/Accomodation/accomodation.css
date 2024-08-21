@@ -1,0 +1,1102 @@
+.accomodation{
+  background: #F4F0EC;
+  margin-top: 3%;
+
+}
+.Ac_App{
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    padding: 25px;
+    margin:15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  color:white;
+    font-size: 2em;
+    animation: fadeInDown 1s ease;
+  }
+  
+  table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    animation: fadeInUp 1s ease;
+    width: 100%; /* Make table width 100% */
+  }
+  tr{
+    background-color: white;
+  }
+  
+  th,
+  td {
+    padding: 12px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    /* background-color: white; */
+  }
+  
+  th {
+    background: #bc630b;
+    color: white;
+    font-size: 1.1em;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  
+  td {
+    border: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
+  }
+  
+  td:not(:first-child):not(:last-child) {
+    border: 1px solid #ddd;
+    /* border-right: 1px solid #ddd; */
+  }
+  
+  tr:hover td {
+    background-color: #f9f9f9;
+  }
+  
+  .Ac_App button {
+    background: linear-gradient(135deg, #ff8c00, #bc630b);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 0.8em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  .Ac_App button:hover {
+    background: linear-gradient(135deg, #bc630b, #a3520a);
+    transform: scale(1.05);
+  }
+  
+  @media screen and (max-width: 768px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+      
+
+    }
+  
+    thead tr {
+      display: none;
+
+    }
+  
+    tr {
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 0.3s ease;
+      /* background-color: white; */
+    }
+  
+    td {
+      border: none;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+    }
+  
+    td:before {
+      content: attr(data-label) ":";
+      position: absolute;
+      left: 10px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: bold;
+      color: #333;
+    }
+  
+  
+    td[data-label='Room Images'] {
+      text-align: right;
+    }
+  
+    td[data-label='Room Images'] 
+    .Ac_App button {
+      width: 50%;
+      height:50%;
+    }
+  }
+  
+  @media screen and (max-width: 350px) {
+    td {
+      padding-left: 25%;
+    }
+  
+    td:before {
+      left: 5px;
+      width: 40%;
+    }
+  
+    table {
+      margin: 10px 0;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Overlay and  Carousel CSS */
+  
+  .General_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    backdrop-filter: blur(5px);
+  }
+  
+  .General_carousel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .General_carousel-header {
+    background-color: #bc630b;
+    color: white;
+    font-size: 22px;
+    padding: 15px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    box-shadow: inset 0 -1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .General_carousel img {
+    width: 100%;
+    display: none;
+    height:400px;
+    border-radius: 0 0 12px 12px;
+  }
+  
+  .General_carousel img.active {
+    display: block;
+  }
+  
+  .General_carousel .General_prev,
+  .General_carousel .General_next,
+  .General_carousel .General_cancel {
+    cursor: pointer;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    user-select: none;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .General_carousel .General_prev,
+  .General_carousel .General_next,
+  .General_carousel {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .General_carousel .General_prev {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .General_carousel .General_next {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .General_carousel .General_cancel {
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    line-height: 38px;
+  }
+  
+  .General_carousel .General_prev:hover,
+  .General_carousel .General_next:hover {
+    transform: scale(1.3);
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  body.no-scroll {
+    overflow: hidden;
+  }
+  
+  @media all and (max-width: 767px) {
+    .General_carousel img {
+      height:300px; 
+    }
+   
+  }
+  
+  
+  /* ///////////////////// */
+  
+
+
+  .container {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 12px;
+    filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    /* margin: 20px; Add margin for spacing */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Light translucent background */
+  }
+  .content h1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content p{
+  font-weight: bold;
+  
+  }
+  
+  
+  
+  /* /////////tables//////////////// */
+   .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+  
+  .General_h1{
+    color: #bc630b;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin: 20px 0;
+    text-align: center;
+    /* color: #333; */
+    font-weight: 600;
+  }
+  
+  .General_responsive-table {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .General_responsive-table li {
+    border-radius: 5px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .General_responsive-table li:hover {
+    transform: translateY(-5px);
+  }
+  
+  .General_responsive-table .table-header {
+    background-color: #bc630b;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .General_responsive-table .col {
+    flex: 1;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .station-info {
+    margin-bottom: 20px;
+  }
+  
+  .station-info h2 {
+    color: #333;
+  }
+  
+  .station-details {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .station-details p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .train-list {
+    margin-top: 20px;
+  }
+  
+  .train-list h2 {
+    color: #333;
+  }
+  
+  @media all and (max-width: 767px) {
+    .General_responsive-table .table-header {
+      display: none;
+    }
+  
+    .General_responsive-table li {
+      display: block;
+      padding: 10px 15px;
+    }
+  
+    .Generalresponsive-table .col {
+      flex-basis: 100%;
+      display: flex;
+      padding: 10px 0;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .General_responsive-table .col:before {
+      color: #bc630b;
+      padding-right: 10px;
+      content: attr(data-label)":";
+      flex-basis: 50%;
+      text-align: right;
+      font-weight: 600;
+    }
+  }
+  
+  
+  
+  /* //////////Accomodation page css ////////.Accomodation_menu-button.active/// */
+  
+  .Accomodation_menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap:10px; /* Add some padding for better spacing */
+  }
+  
+  .Accomodation_menu-link {
+    text-decoration: none;
+  }
+  
+  .Accomodation_menu-button {
+    position: relative; /* Make the button container relative for pseudo-elements */
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 30px; /* Adjust padding for better spacing */
+    margin: 10px 10px; /* Adjust margin for better spacing */
+    border: none;
+    border-radius: 6px; /* Add border-radius for rounded corners */
+    background-color: #f6830f; /* Change background color */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .Accomodation_menu-button:hover {
+    background-color: #e1700f; /* Change background color on hover */
+  }
+  
+  .Accomodation_menu-button.active {
+    background-color: #bc4222;; /* Change background color for active button */
+  }
+  
+  /* Media query for responsiveness */
+  @media screen and (max-width: 768px) {
+    .Accomodation_menu-button {
+      width: 80%;
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .Accomodation_menu-button {
+      width: 100%;
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+      padding: 12px 20px; 
+    }
+ 
+    .General_h1{
+      color: #bc630b;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .CardFlip_content .CardFlip_heading{
+      font-size: 15px;
+    }
+  
+    
+  }
+  
+  
+  
+  /* /////////////// list ////////////////*/
+  
+  .notice-container {
+    width: auto;
+    margin: 30px 30px 0 30px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #bc630b;
+    font-size: 24px;
+  }
+  
+  ol {
+    color: #555;
+    line-height: 1.6;
+    padding-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .notice-point {
+    background-color: #fff7e0; 
+    border-left: 5px solid #f4c542;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  /* ////////// button in form ///////////// */
+  
+  .fadeButton {
+    background: linear-gradient(45deg, #d8ae18, #f47506); 
+    color: white;
+    border: none;
+    padding: 10px 20px; 
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 0px; 
+    transition: background 0.5s; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .fadeButton:hover {
+    background: linear-gradient(45deg, #f47506, #d8ae18); 
+  }
+  
+  .fadeButton.clicked {
+    background: orange; 
+  }
+  
+  /* Media query for fadeButton responsiveness */
+  @media screen and (max-width: 768px) {
+    .fadeButton {
+      font-size: 6px; /* Adjust font size for smaller screens */
+      padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .fadeButton {
+      font-size: 10px; /* Adjust font size for smaller screens */
+      padding: 6px 12px; /* Adjust padding for smaller screens */
+    }
+    .CardFlip_content .CardFlip_heading{
+      font-size: 15px;
+    }
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* src/Carousel.css */
+  
+  /* src/Carousel.css */
+  /* .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+    /* z-index: 999; Place the overlay behind the carousel but above the webpage content */
+    /* backdrop-filter: blur(5px); Add a blur effect */
+  /* } */
+  
+  .carousel {
+   
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0); 
+    /* border: 1px solid #ccc; */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15); 
+    z-index: 1000;
+    overflow: hidden; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .carousel-header {
+    background-color: #bc630b;
+    color: white;
+    font-size: 22px;
+    padding: 15px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    box-shadow: inset 0 -1px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .carousel img {
+    width: 100%;
+    display: none;
+    border-radius: 0 0 12px 12px;
+  }
+  
+  .carousel img.active {
+    display: block;
+  }
+  
+  .carousel .prev, .carousel .next, .carousel .cancel {
+    cursor: pointer;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    
+    text-align: center;
+    line-height: 40px;
+    user-select: none;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .carousel .prev, .carousel .next, .carousel{
+      background-color: rgba(0, 0, 0, 0.6);
+  }
+  .carousel .prev {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel .next {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel .cancel {
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    line-height: 38px;
+  }
+  
+  .carousel .prev:hover, .carousel .next:hover{
+   
+    transform: scale(1.3); 
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Button shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+  }
+  
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+
+  
+  /* ///////////////////////////////////// */
+  
+  
+  :root {
+    --primary: hsl(222, 80%, 50%);
+    --primary-light: hsl(222, 50%, 95%);
+    --secondary: hsl(350, 80%, 50%);
+    --red: hsl(10, 80%, 50%);
+    --orange: hsl(50, 80%, 50%);
+    --orange-light: hsla(50, 80%, 90%);
+  }
+  
+  /* *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  /* html {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #333;
+    font-family: "Nunito Sans", sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* background: url('../component/assets/background.jpg') no-repeat center center fixed; Add your background image path here */
+    /* background-size: cover; */
+
+  
+  
+  
+  .CardFlip_heading {
+    width: 100%;
+    margin-left: 1rem;
+    font-weight: 900;
+    font-size: 1.618rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1ch;
+    line-height: 1;
+    padding-bottom: 0.5em;
+    margin-bottom: 1rem;
+    position: relative;
+    margin:15px;
+  }
+  .CardFlip_heading span{
+    font-size: 14px;
+    /* text-transform:lowercase; */
+
+  }
+  .CardFlip_heading link{
+    text-decoration: none;
+  }
+  
+  .CardFlip_description {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  
+  
+  .CardFlip_card.flipped {
+    transform: rotateY(180deg);
+    
+  }
+  
+  
+  
+  .CardFlip_content {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow cards to wrap */
+    max-width: 1200px; /* Increased for larger cards on desktop */
+    padding: 2rem; /* Added padding */
+    padding-top: 4%;
+  }
+  
+  .CardFlip_card {
+    color: inherit;
+    cursor: pointer;
+    width: calc(33% - 2rem);
+    min-width: calc(33% - 2rem);
+    height: 400px;
+    min-height: 400px;
+    perspective: 1000px;
+    margin: 1rem;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    max-width: calc(33% - 2rem); /* Adjusted max-width for better responsiveness */
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .CardFlip_card {
+      width: calc(50% - 2rem); /* Adjusted width for tablet */
+      min-width: calc(50% - 2rem);
+      max-width: calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (max-width: 622px) {
+    .CardFlip_card {
+      width: calc(100% - 2rem); /* Adjusted width for mobile */
+      min-width: calc(100% - 2rem);
+      max-width: calc(100% - 2rem);
+    }
+  }
+  
+  
+  .CardFlip_front,
+  .CardFlip_back {
+    display: flex;
+    border-radius: 6px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .CardFlip_front {
+    background-size: cover;
+    padding: 2rem;
+    font-size: 1.618rem;
+    font-weight: 600;
+    color: #fff;
+    overflow: hidden;
+    font-family: Poppins, sans-serif;
+    background-color: var(--orange-light); /* Added light orange background */
+  }
+  
+  .CardFlip_front:before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--orange-light);
+    opacity: 0.25;
+    z-index: -1;
+    
+  }
+
+  .CardFlip_front{
+   
+    box-sizing: border-box;
+}
+
+.CardFlip_front *,
+.CardFlip_front:before,
+.CardFlip_front:after {
+    box-sizing: border-box;
+}
+  
+  .CardFlip_front-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .CardFlip_front-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+  }
+  
+  .CardFlip_front-heading {
+    margin-bottom: 1rem;
+  }
+  
+  .CardFlip_buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .CardFlip_back {
+    
+    background: var(--orange-light); /* Added light orange background */
+    transform: rotateY(180deg);
+    /* padding: 1em 2em; */
+    /* font-size: 0.9rem; Smaller font size for back content */
+    padding:4px;
+  }
+  
+  .CardFlip_back-content p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    margin:5px;
+    text-align: justify;
+    padding-left: 3%;
+    padding-right: 3%;
+
+  }
+
+  .CardFlip_content .CardFlip_heading{
+    font-size: 24px;
+  }
+  
+  .CardFlip_back .button {
+    background: linear-gradient(135deg, hsl(202, 80%, 50%), var(--primary));
+  }
+  
+  .CardFlip_back .button:before {
+    box-shadow: 0 0 10px 10px hsla(222, 80%, 50%, 0.25);
+    background-color: hsla(222, 80%, 50%, 0.25);
+  }
+  
+  .CardFlip_card:nth-child(even) .back .button {
+    background: linear-gradient(135deg, hsl(330, 80%, 50%), var(--secondary));
+  }
+  
+  .CardFlip_card:nth-child(even) .back .button:before {
+    box-shadow: 0 0 10px 10px hsla(350, 80%, 50%, 0.25);
+    background-color: hsla(350, 80%, 50%, 0.25);
+  }
+  
+  /* .button {
+    --height: 40px;
+    transform: translateZ(var(--height));
+    cursor: pointer;
+    backface-visibility: hidden;
+    font-weight: bold;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    font: inherit;
+    border: none;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 300ms ease;
+    margin: 0.5rem; /* Space between buttons */
+  /* } */
+  
+  /* .button.small-button {
+    padding: 10px;
+    /* Smaller size for the small button */
+  /* } */
+  
+  /* .button:before {
+    transition: 300ms ease;
+    position: absolute;
+    display: block;
+    content: '';
+    transform: translateZ(calc(var(--height) * -1));
+    backface-visibility: hidden;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    border-radius: 100px;
+    left: 10px;
+    top: 16px;
+  }
+  
+  .button:hover {
+    transform: translateZ(calc(var(--height) + 15px));
+  } */
+  
+  /* .button:hover:before {
+    transform: translateZ(calc(var(--height) * -1 - 15px));
+  }
+  
+  .button:active {
+    transform: translateZ(calc(var(--height) / 2));
+  }
+  
+  .button:active:before {
+    transform: translateZ(calc(var(--height) / 2 * -1));
+    top: 12px;
+  } */ 
+  
+  .CardFlip_front .button {
+    background: linear-gradient(135deg, var(--orange), var(--primary));
+  }
+  
+  .CardFlip_front .button:before {
+    box-shadow: 0 0 10px 10px hsla(50, 80%, 50%, 0.25);
+    background-color: hsla(50, 80%, 50%, 0.25);
+  }
+  
+  
+  
+  .CardFlip_button-wrapper1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Add gap between buttons */
+    margin-top: 20px; /* Add margin to top */
+  }
+  
+  .CardFlip_btn1 {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 0.8rem;  
+    letter-spacing: 2px;  
+    cursor: pointer;
+    margin: 0;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform: rotate(-5deg); /* Align buttons on the same angle */
+  }
+  
+  .CardFlip_btn1:hover {
+    transform: rotate(-5deg) scale(1.125);
+  }
+  
+  .outline1 {
+    background: transparent;
+    color: rgba(171, 84, 30, 0.9);
+    border: 1px solid rgba(168, 86, 19, 0.6);
+    transition: all 0.3s ease;
+  }
+  
+  .outline1:hover {
+    /* color: rgba(164, 68, 33, 0.9); */
+    /* border-color: rgba(255, 255, 255, 0.9); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .fill1 {
+    background: rgba(168, 110, 29, 0.9);
+    filter: drop-shadow(0);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    color:black;
+  }
+  
+  .fill1:hover {
+    filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  
+  
+  
+  
+  
+  

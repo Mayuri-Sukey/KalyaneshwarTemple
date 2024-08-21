@@ -1,0 +1,143 @@
+.menu {
+    position: fixed;
+    transform: translate(0%, 65%);
+    z-index: 1111;
+    height: 100%;
+  }
+  
+  .menu a {
+    position: absolute;
+    background-color: rgb(197 123 31) !important;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    padding: auto;
+    padding: 8px 8px;
+  }
+  
+  .menu a.hidden {
+    visibility: hidden !important;
+  }
+  
+  .menu a:last-child {
+    padding: 10px 8px;
+  }
+  
+  .menu a:nth-child(1) {
+    background-color: rgb(255, 255, 255) !important;
+    padding: 10px 8px;
+  }
+  
+  .menu a:nth-child(1).show {
+    transform: rotate(-70deg) translate(100px) rotate(70deg);
+  }
+  
+  .menu a:nth-child(2) {
+    background-color: rgb(255, 255, 255) !important;
+  }
+  
+  .menu a:nth-child(2).show {
+    transform: rotate(-25deg) translate(100px) rotate(25deg);
+  }
+  
+  .menu a:nth-child(3) {
+    background-color: rgb(255, 255, 255) !important;
+  }
+  
+  .menu a:nth-child(3).show {
+    transform: rotate(25deg) translate(100px) rotate(-25deg);
+  }
+
+  .menu a:nth-child(4) {
+    background-color: rgb(255, 255, 255) !important;
+  }
+  
+  .menu a:nth-child(4).show {
+    transform: rotate(70deg) translate(100px) rotate(-70deg);
+  }
+
+  #soc {
+   width: 30px;
+   height: 30px;
+   color: white;
+  }
+
+  #facebook {
+    width: 30px;
+   height: 30px;
+   color: blue;
+  }
+
+  .menu a:hover  {
+    scale: 1.07;
+    transition: all ease-in-out .2s;
+   }
+
+
+   .trans span:nth-child(1){
+    background-color: rgb(197 123 31)!important;
+   }
+   
+   .trans a:nth-child(2) {
+    background-color: transparent !important;
+    border: none !important;
+    
+  }
+   .trans a:last-child {
+    padding: 10px 8px;
+  }
+
+
+
+   .trans {
+    transform: translate(0%, 40%) !important;
+    
+   }
+
+   .trans img {
+    width: 32px;
+   height: 32px; 
+   
+
+   }
+
+   .label {
+      display: flex;
+      text-decoration: none;
+      align-items: center;
+   }
+
+   .don {
+    background: transparent;
+    position: absolute;
+    transform: translate(50px, 15px);
+    color: white !important;
+    z-index: 0;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 10px;
+
+   }
+
+
+   .music_menu {
+    position: fixed;
+    transform: translate(0%, 20%);
+    z-index: 1111;
+    height: 100%;
+  }
+  
+  .music_menu a {
+    position: absolute;
+    background-color: rgb(197 123 31) !important;
+    border: 3px solid white;
+    display: flex;
+    color:white;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    padding: 14px 14px;
+  }

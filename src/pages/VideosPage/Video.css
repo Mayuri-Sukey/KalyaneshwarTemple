@@ -1,0 +1,86 @@
+
+
+.video-Section{
+  background-image: linear-gradient(90deg, #5bb6b6 0%, #eba90c 100%);
+    padding: 48px 0;}
+
+.Video_section-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+}
+
+.Video_section-content {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.Video_section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #C15E03;
+}
+
+.Video_section-subtitle {
+  margin-top: 8px;
+  font-size: 20px;
+  color: #f9fbfd; /* Tailwind's gray-500 equivalent */
+}
+
+.Video_video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .Video_video-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Video_video-container {
+  position: relative;
+  padding-top: 56.25%; 
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.Video_video-container:hover {
+  transform: scale(1.05);
+}
+
+.Video_video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Video_video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.Video_video-container:hover .Video_video-overlay {
+  opacity: 1;
+}
+
+.Video_video-title {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+}

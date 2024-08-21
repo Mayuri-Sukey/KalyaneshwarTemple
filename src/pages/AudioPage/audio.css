@@ -1,0 +1,300 @@
+
+.audio-Section{
+  background-image: linear-gradient(90deg, #5bb6b6 0%, #eba90c 100%);
+  padding: 48px 0;}
+
+
+.audio-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.audio-header {
+
+  color: white;
+  padding: 16px;
+margin-top: 20px;
+  display:flex;
+    justify-content: center;
+    align-items: center;
+
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); Shadow for header */
+}
+
+.audio-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a202c;
+  margin-bottom: 8px;
+}
+
+.audio-button-container {
+  display: flex;
+  gap: 8px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-genre-button {
+  background-color: #f0e2cd; 
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.audio-genre-button.active {
+  background-color: #f57c00;
+  color: white;
+}
+
+.audio-genre-button:hover {
+  background-color: #ffb74d;
+}
+
+.audio-main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.audio-song-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  gap: 16px; /* Gap between grid items */
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed */
+  margin: 0 auto;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Increased depth */
+  border-radius: 16px; /* Rounded corners */
+  padding: 24px;
+  margin-top: 16px;
+  animation: fadeInUp 0.5s ease; /* Fade in animation */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.audio-song-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.audio-song-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.audio-album-cover {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.audio-song-info {
+  display: flex;
+  align-items: center;
+}
+
+.audio-song-title {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.audio-song-artist {
+  color: #777;
+  margin-left: 10px;
+}
+
+.audio-song-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.audio-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.audio-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.audio-icon {
+
+  transition: fill 0.3s ease; /* Smooth transition for color change */
+  vertical-align: middle;
+  background:rgb(196, 150, 66);
+  color:white;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+
+.audio-foter {
+  /* background-color: #ffcc80; */
+  color: #1a202c;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  /* border-top: 1px solid #ccc; */
+  margin-bottom: 10px;
+}
+
+.audio-pagination {
+  display: flex;
+  gap: 8px;
+}
+
+.audio-pagination-link {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #f0e2cd;
+  color: #1a202c;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.audio-pagination-link.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.audio-pagination-link.active {
+  background-color: #f57c00;
+  color: white;
+}
+
+.audio-pagination-info {
+  color: #f6f4f4;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .audio-header {
+    padding: 12px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+  }
+
+  .audio-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .audio-button-container {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .audio-genre-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    display: flex;
+  }
+
+  .audio-song-list {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    padding: 16px;
+  }
+
+  .audio-song-item {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+
+  .audio-album-cover {
+    width: 50px;
+    height: 50px;
+  }
+
+  .audio-pagination {
+    justify-content: center;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+
+  .audio-pagination-link {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .audio-header {
+    padding: 8px;
+  }
+
+  .audio-title {
+    font-size: 18px;
+  }
+
+  .audio-button-container {
+ display: grid;
+    gap: 8px;
+    grid-template-columns: 4fr 3fr 4fr;
+  }
+
+  .audio-genre-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .audio-song-item {
+    padding: 12px;
+  }
+
+  .audio-pagination {
+    gap: 4px;
+  }
+
+  .audio-pagination-link {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+.audio-foter {
+
+  display: flex;
+  flex-direction: column;
+
+}
+}
