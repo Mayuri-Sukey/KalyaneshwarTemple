@@ -13,6 +13,8 @@ import Preloader from "../components/Preloader";
 import Navbar from "../components/Navbar";
 import Social from "../components/social-icon/Social";
 import DonationRate from "../components/DonationRate";
+// import About from "./About";
+import CaroselSection from "../components/CaroselSection";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -31,7 +33,8 @@ const Home = () => {
         <>
           <Navbar />
           <Social />
-          <Carousel />
+          <CaroselSection/>
+          {/* <Carousel /> */}
           {/* <DonationRate/> */}
           <AboutSection />
           <Services />

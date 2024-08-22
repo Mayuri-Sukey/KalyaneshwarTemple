@@ -4,9 +4,11 @@ import Autoplay from "embla-carousel-autoplay";
 import Flower from "../assets/images/flower.png";
 
 // import images from "../Data/slideimg.json"
-import Img1 from "../assets/kalyneshwar/carosel1.jpg";
-import Img2 from "../assets/kalyneshwar/shivlingcarosel.jpg";
-import Img3 from "../assets/images/3.png";
+import Img1 from "../assets/kalyneshwar/mandirImage3.3.jpg";
+import Img2 from "../assets/kalyneshwar/headerlogo4.jpg";
+import Img3 from "../assets/kalyneshwar/mandirimage1.3.jpg";
+
+// import Img3 from "../assets/images/3.png";
 import Img4 from "../assets/images/4.png";
 import Img5 from "../assets/images/5.png";
 import GoldPlate from "../assets/images/gold.png";
@@ -20,7 +22,6 @@ const images = [
     id: "2",
     img: Img2,
   }
-
 ];
 
 const Carousel = () => {

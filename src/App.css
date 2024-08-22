@@ -294,7 +294,7 @@ body {
   width: 60%; /* Adjust this value as needed */
   max-width: 400px;
   transition: all ease-in-out 1s;
-  transform: translateX(5%); /* Shift to the right */
+  transform: translatey(5%); /* Shift to the right */
 }
 
 /* Adjust width of .sai for different screen sizes */
