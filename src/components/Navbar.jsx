@@ -7,7 +7,7 @@ import Logo from "../assets/kalyneshwar/Om_symbol.svg.png";
 import NavbarItems from "./NavbarItems";
 import items from "../Data/navlist.json";
 import { Link } from "react-router-dom";
-
+// import logo1 from "../assets/kalyneshwar/shivjilogo1.png";
 
 // import "./styles.css"; // Ensure this path is correct for your project structure
 
@@ -48,8 +48,12 @@ const Navbar = () => {
             <FaApple /> <span>IOS</span>
           </div>
         </div>
+        
         <Link to="/" className="logo">
           <img src={Logo} alt="Logo" width={70} />
+          
+          {/* <img src={logo1} alt="omlogo" className='h-20 relative z-10'/> */}
+
           <span>Shree Kalyaneshwar Mandir, Nagpur</span>
         </Link>
 

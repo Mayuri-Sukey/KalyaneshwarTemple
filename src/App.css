@@ -2347,3 +2347,20 @@ footer {
 }
 
 
+/* logo */
+.rotating-bg {
+  background-image: url('./assets/kalyneshwar/bgmandirimage1.png');
+  height: 80px;
+  width:80px;
+  z-index: -1;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
